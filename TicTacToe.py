@@ -142,9 +142,9 @@ window.resizable(width = False, height = False)
 
 # Set the window icon
 img=PhotoImage(file='C:\\game icons\\tic-tac-toe.png')
+window.iconphoto(False,img)
 
 # Configure window title, background color, and geometry
-window.iconphoto(False,img)
 window.title("Tech Titan Tic Tac Toe")
 window['background']='#FFE5B4'
 window.geometry("550x700+500+50")
@@ -169,10 +169,8 @@ reset_button = Button(text="restart", font=('consolas',15), command=new_game,bg=
 reset_button.pack(side="top",pady=20)
 
 # the initial coordinates for the question button
-j = 10
-i = 500
-question_button = Button(text= "?", font=('vijaya',20), command=mechanics)
-question_button.place(y=j, x=i)
+question_button = Button(text= "?", font=('vijaya',20), bg="#FFE5B4", activebackground="#FFE5B4", command=mechanics)
+question_button.place(y=10, x=500)
 
 # Create a frame to hold the game board buttons
 frame = Frame(window)
